@@ -1,0 +1,145 @@
+{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+input {
+        outline: none;
+}
+
+html,body {
+        height: 100%;
+}
+
+body {
+        display: flex;
+        background: linear-gradient(to right, #e5e065, #96cee1);
+}
+
+/*登录框*/
+.box {
+        width: 1050px;
+        height: 600px;
+        display: flex;
+        position: relative;
+        /*background-color: #ffffff;*/
+        margin: auto;
+        border-radius: 8px;
+        border: 1px solid rgba(255,255,255,.6);
+        box-shadow: 4px 4px 3px rgba(0,0,0,.1);
+}
+
+.pre-box {
+        width: calc(1050px/2);
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        border-radius: 4px;
+        box-shadow: 4px 4px 3px rgba(0,0,0,.1);
+        background-color: rgb(204,218,140);
+        transition: 0.2s ease-in-out;
+}
+.img-box {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 4px 4px 3px rgba(0,0,0,.1);
+}
+
+.img-box img {
+        width: 100%;
+        transition: 0.3s;
+}
+
+.pre-box h1 {
+        margin-top: 150px;
+        text-align: center;
+        letter-spacing: 5px;
+        text-shadow: 4px 4px 3px rgba(0,0,0,.1);
+        font-weight: bold;
+        color: white;
+}
+
+.pre-box p {
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        margin: 20px 0;
+        text-shadow: 4px 4px 3px rgba(0,0,0,.1);
+        color: white;
+}
+
+.login-form,.register-form {
+        flex:1;
+        height: 100%;
+}
+
+.title-box {
+        height: 250px;
+        line-height: 400px;
+}
+
+.title-box h1{
+        text-align: center;
+        letter-spacing: 3px;
+        color: white;
+        text-shadow: 4px 4px 3px rgba(0,0,0,.1);
+}
+
+.input-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+input {
+        width: 60%;
+        height: 30px;
+        margin-bottom: 20px;
+        text-indent: 4px;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+}
+
+input:focus::placeholder {
+        opacity: 0;
+}
+
+.btn-box {
+        display: flex;
+        justify-content: center;
+}
+
+button {
+        border: none;
+        background-color: #4b8d9b;
+        margin: 0  7px;
+        color: white;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 4px;
+        font-size: 16px;
+}
+
+button:hover {
+        cursor: pointer;
+        opacity: .8;
+}
+
+.btn-box p {
+        height: 15px;
+        line-height: 1px;
+        color: white;
+        font-size: 14px;
+        text-shadow: 4px 4px 3px rgba(0,0,0,.1);
+}
+
+.btn-box p:hover {
+        cursor: pointer;
+        border-bottom: 1px solid white;
+}
