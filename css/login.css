@@ -30,17 +30,7 @@ body {
         box-shadow: 4px 4px 3px rgba(0,0,0,.1);
 }
 
-.pre-box {
-        width: calc(1050px/2);
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        border-radius: 4px;
-        box-shadow: 4px 4px 3px rgba(0,0,0,.1);
-        background-color: rgb(204,218,140);
-        transition: 0.2s ease-in-out;
-}
+
 .img-box {
         width: 200px;
         height: 200px;
@@ -62,6 +52,7 @@ body {
         text-shadow: 4px 4px 3px rgba(0,0,0,.1);
         font-weight: bold;
         color: white;
+        font-size: 35px;
 }
 
 .pre-box p {
@@ -80,14 +71,26 @@ body {
 
 .title-box {
         height: 250px;
-        line-height: 400px;
+        line-height: 300px;
 }
 
 .title-box h1{
         text-align: center;
-        letter-spacing: 3px;
+        letter-spacing: 4px;
         color: white;
         text-shadow: 4px 4px 3px rgba(0,0,0,.1);
+        font-size: 45px;
+}
+.pre-box {
+        width: calc(1050px/2);
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        border-radius: 4px;
+        box-shadow: 4px 4px 3px rgba(0,0,0,.1);
+        background-color: rgb(204,218,140);
+        transition: 0.2s ease-in-out;
 }
 
 .input-box {
@@ -98,12 +101,25 @@ body {
 
 input {
         width: 60%;
-        height: 30px;
+        height: 25px;
         margin-bottom: 20px;
         text-indent: 4px;
-        border: 1px solid #dedede;
+        border: 1px solid #efecec;
         border-radius: 4px;
+        color: #76b270;
 }
+
+input::placeholder{
+        color: #76b270;
+}
+input:focus {
+        border-color: #76b270;
+}
+
+#eye {
+        cursor: pointer;
+}
+
 
 input:focus::placeholder {
         opacity: 0;
@@ -116,7 +132,8 @@ input:focus::placeholder {
 
 button {
         border: none;
-        background-color: #4b8d9b;
+        /*background-color: #4b8d9b;*/
+        background: linear-gradient(to right, #81c278, #a4cbde);
         margin: 0  7px;
         color: white;
         width: 100px;
@@ -142,4 +159,38 @@ button:hover {
 .btn-box p:hover {
         cursor: pointer;
         border-bottom: 1px solid white;
+        padding-bottom: 1px;
+}
+/*
+动画
+ */
+
+.loader_box {
+        margin: auto;
+        display: none;
+}
+/* HTML: <div class="loader"></div>
+ 加载动画
+ */
+.loader {
+        opacity:100;
+        position: relative;
+        right: 500px;
+        --d:30px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        color: #81c278;
+        box-shadow:
+                calc(1*var(--d))      calc(0*var(--d))     0 0,
+                calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+                calc(0*var(--d))      calc(1*var(--d))     0 2px,
+                calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+                calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+                calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+                calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+        animation: l27 1s infinite steps(8);
+}
+@keyframes l27 {
+        100% {transform: rotate(1turn)}
 }
